@@ -1,0 +1,23 @@
+﻿1. cd ~
+2. mkdir zadanie
+3. chmod o-rx zaadanie
+4. cd zadanie
+5. touch produkty.csv
+6. echo "nazwa, cena, ilosc" > produkty
+
+7.
+echo "Jabłko,3.50,10" >> produkty.csv
+echo "Gruszka,4.00,5" >> produkty.csv
+echo "Banany,2.90,7" >> produkty.csv
+echo "Mango,9.99,3" >> produkty.csv
+
+8.cat pracownicy.csv
+9. touch .archiwum.csv
+10. ls -la
+11. find /usr -type f -name "*conf*" 2>/dev/null
+12. find / -type d -name "*log*" 2>/dev/null > logs.txt
+13. tail -n +2 produkty.csv | sort -t',' -k2,2n | nl -s'. ' > .archiwum2.csv
+14. diff .archiwum.csv .archiwum2.csv
+15. sed 's/,/ /g' .archiwum2.csv // W oryginalnym pliku była niespójność w nazewnictwie.
+16. sed -n '/,[^,]*9[^,]*,/p' produkty.csv
+17. df -h | awk 'NR>1 {used+=$3; avail+=$4; print $6} END {print "Suma użycia: " used "G"; print "Suma wolnego: " avail "G"}'
